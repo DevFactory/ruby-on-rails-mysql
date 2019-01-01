@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set the right Rake version
+bundle install
+
 # Start the database
 /etc/init.d/mysql start
 
