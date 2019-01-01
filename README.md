@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Clone the repo
+```sh
+git clone https://github.com/devfactorycode/ruby-on-rails-mysql.git
+```
 
-Things you may want to cover:
+## Create the devspace
+```sh
+cd ruby-on-rails-mysql/devspace
+devspaces create
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run the web app
+```sh
+cd ruby-on-rails-mysql
+./start.sh
+```
