@@ -1,7 +1,16 @@
+// Place all the styles related to the dogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 $dog-width: 100px;
 $interval: 200ms;
 $color-gray: #EAEBEC;
 $easing: ease-in-out;
+
+.mydogs {
+  position: absolute;
+  top: 0;
+}
 
 .ball {
   width: 32px;

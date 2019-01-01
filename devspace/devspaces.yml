@@ -1,5 +1,5 @@
 --- # devspaces.yml
-name: ruby-docker4
+name: ruby
 description: Ruby
 icon-file: expressjslogo.png
 
