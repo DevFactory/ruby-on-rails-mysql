@@ -2,7 +2,7 @@
 
 ## Clone the repo
 ```sh
-git clone https://github.com/devfactorycode/ruby-on-rails-mysql.git
+git clone https://github.com/devfactory/ruby-on-rails-mysql.git
 ```
 
 ## Create the devspace
