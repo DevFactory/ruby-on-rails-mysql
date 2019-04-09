@@ -1,6 +1,6 @@
 --- # devspaces.yml
-name: ruby
-description: Ruby
+name: RubyDemoApr090900
+description: Ruby demoApr09
 icon-file: expressjslogo.png
 
 # If you want to use a different Dockerfile for your DevSpace, provide the path
