@@ -10,6 +10,6 @@ RUN apt-get update \
 # This Dockerfile doesn't need to have an entrypoint and a command
 # as Bitbucket Pipelines will overwrite it with a bash script.
 
-# RUN gem install rails -v '5.2.2'
+RUN gem install rails -v '5.2.2'
 
-# /etc/init.d/mysql start
+CMD /etc/init.d/mysql start
