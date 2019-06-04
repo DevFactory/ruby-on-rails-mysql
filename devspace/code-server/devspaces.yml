@@ -1,0 +1,50 @@
+--- # devspaces.yml
+name: ruby-code-server-demo
+description: RoR dev environment using code-server.
+
+# If you want to use a different Dockerfile for your DevSpace, provide the path
+# here.
+docker-file: Dockerfile
+
+# If you need additional files when building your Dockerfile, such as some
+# application binaries that your Dockerfile references, list the glob paths to
+# include here. They are relative to this devspaces.yml file.
+docker-build-includes: |
+  **/*
+  ../open-remote-connections.sql
+
+ports:
+  - protocol: http # can be udp|tcp|http
+    port-number: 3000
+    description: web app http port
+  - protocol: tcp
+    port-number: 3306
+    description: mysql port
+  - protocol: http
+    port-number: 8443
+    description: code-server port
+
+#
+# Any environment variable specified here is injected into the build and/or
+# runtime environment of the Docker container.
+# The *Shared* flag determines if the value of the environment variable is shared
+#   when this DevSpace is shared with others. The default is to share environment
+#   variable values. If there is a value that should be set differently by every
+#   developer that the DevSpace is shared with then Shared should be set to No.
+#   An example of a value not to share is an API key that every developer generates
+#   for themselves.
+# The *Scope* enum determines if the environment variable is used at buildtime
+# (docker build), runtime (docker run) or both. The acceptable values are 'run',
+# 'build' and 'all'. If unspecified, scope is 'all' by default.
+environment-vars:
+
+# When you bind your DevSpace to a local directory, the files will be synchronized
+# betewen your workstation and the /data directory in your DevSpace container.
+# If there are files that should not be synced, such as large objects or logs,
+# configure an ignore directive here
+sync-ignore: |
+  .git
+  .idea
+  **/node_modules
+  .DS_Store
+  .data

@@ -1,6 +1,6 @@
-# DOCKER FILE 
+# DOCKER FILE
 
-FROM ruby:latest
+FROM ruby:2.6.2
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
 && apt-get install -y mysql-server mysql-client default-libmysqlclient-dev vim nodejs --no-install-recommends \
