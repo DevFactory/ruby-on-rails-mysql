@@ -48,3 +48,4 @@ sync-ignore: |
   **/node_modules
   .DS_Store
   .data
+  .mysql_data
