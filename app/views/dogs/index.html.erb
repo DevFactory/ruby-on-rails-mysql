@@ -3,7 +3,7 @@
   <h1>These are my lovely dogs!</h1>
   <ul>
     <% @dogs.each do |dog| %>
-      <li><%= link_to dog.name, dog_path(dog)  %>  - <%= dog.motto %></li>
+      <li><%= link_to dog.name, dog_path(dog)  %>  - <%= dog.motto %> - <%= link_to "Edit", edit_dog_path(dog) %></li>
     <% end %>
   </ul>
 </div>

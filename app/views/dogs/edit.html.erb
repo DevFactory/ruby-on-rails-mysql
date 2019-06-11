@@ -1,2 +1,15 @@
+<% provide(:title, "Edit Dog") %>
 <h1>Dogs#edit</h1>
-<p>Find me in app/views/dogs/edit.html.erb</p>
+<div>
+    <%= form_for(@dog) do |f| %>
+        <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </p>
+        <p>
+        <%= f.label :motto %>
+        <%= f.text_field :motto %>
+        </p>
+        <%= f.submit "Save changes" %>
+    <% end %>
+</div>
