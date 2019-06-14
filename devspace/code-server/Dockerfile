@@ -14,6 +14,7 @@ RUN apt-get update \
     --no-install-recommends \
   && apt-get clean \
   && sed -i -e 's/bind-address/#bind-address/g' /etc/mysql/mariadb.conf.d/50-server.cnf \
+  && sed -i 's/datadir.*/datadir        = \/data\/.mysql_data/g' /etc/mysql/mariadb.conf.d/50-server.cnf \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN locale-gen en_US.UTF-8

@@ -10,4 +10,4 @@ bundle install
 mysql < database_backup.sql
 
 # Start the server
-rails server
+rails server -e development
